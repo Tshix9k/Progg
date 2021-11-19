@@ -5,17 +5,15 @@
 #ifndef TIME_H
 #define TIME_H
 
-typedef unsigned int uint;
-
 /// <summary>
 /// Класс для работы со временем в формате "час:минута:секунда"
 /// </summary>
 class Time
 {
 private:
-	uint hour;
-	uint minute;
-	uint seconds;
+	unsigned int hour;
+	unsigned int minute;
+	unsigned int seconds;
 
 public:
 	/// <summary>
@@ -29,7 +27,7 @@ public:
 	/// <param name="hour"></param>
 	/// <param name="minute"></param>
 	/// <param name="seconds"></param>
-	Time(uint hour, uint minute, uint seconds);
+	Time(unsigned int hour, unsigned int minute, unsigned int seconds);
 
 	/// <summary>
 	/// Конструктор с сторокой в параметрах
@@ -50,31 +48,31 @@ public:
 	/// Сетеры для каждой еденицы времени
 	/// </summary>
 
-	void setHour(uint hour);
-	void setMinute(uint mminute);
-	void setSecond(uint seconds);
+	void setHour(unsigned int hour);
+	void setMinute(unsigned int mminute);
+	void setSecond(unsigned int seconds);
 
 	/// <summary>
 	/// Гетеры для каждой еденицы времени
 	/// </summary>
 
-	uint getHour()const;
-	uint getMinute()const;
-	uint getSeconds()const;
+	unsigned int getHour()const;
+	unsigned int getMinute()const;
+	unsigned int getSeconds()const;
 
 	/// <summary>
 	/// Перевод времени в секунды
 	/// </summary>
 	/// <param name="time"></param>
 	/// <returns>время в секундах</returns>
-	static uint ConvertToSec(Time& time);
+	static unsigned int ConvertToSec(Time& time);
 
 	/// <summary>
 	/// Перевод времени в минуты
 	/// </summary>
 	/// <param name="time"></param>
 	/// <returns></returns>
-	static uint ConvertToMin(Time& time);
+	static unsigned int ConvertToMin(Time& time);
 	/// <summary>
 	/// Фунцкия для расчета разницы двух времен
 	/// </summary>
@@ -95,7 +93,7 @@ public:
 	/// Функция для добавления ко времени некотооре кол-во секунд
 	/// </summary>
 	/// <param name="seconds"></param>
-	void AddtTime(uint seconds);
+	void AddtTime(unsigned int seconds);
 
 	/// <summary>
 	/// Сравнение двух времен
